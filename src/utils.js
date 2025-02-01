@@ -6,7 +6,7 @@ export function displayDialogue(text, onDisplayEnd) {
 
     let index = 0;
     let currentText = "";
-    const intervalRef = setInterval(() => {
+    const intervalRef = setInterval(() => { //text animation
         if (index < text.length) {
             currentText += text[index];
             dialogue.innerHTML = currentText;
@@ -14,11 +14,11 @@ export function displayDialogue(text, onDisplayEnd) {
             return;
         }
         clearInterval(intervalRef);
-    }, 5);
+    }, 5); //each letter appears every 5 ms
 
     const closeBtn = document.getElementById("close");
 
-    function onCloseBtnClick(){
+    function onCloseBtnClick(){ //handles closing dialog box's button
         onDisplayEnd();
         dialogueUI.style.display = "none";
         dialogue.innerHTML = "";
@@ -30,10 +30,10 @@ export function displayDialogue(text, onDisplayEnd) {
 }
 
 export function setCamScale(k) {
-    const resizeFactor = k.width() / k.height();
-    if (resizeFactor < 1) {
-      k.camScale(k.vec2(1));
+    const resizeFactor = k.width() / k.height(); //calc aspect ratio
+    if (resizeFactor < 1) { //cam zoom based on aspect ratio
+      k.camScale(k.vec2(1)); //def portrait screen
     } else {
-      k.camScale(k.vec2(1.5));
+      k.camScale(k.vec2(1.5)); //zoom out for wider screen
     }
   }
