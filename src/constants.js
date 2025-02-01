@@ -1,6 +1,6 @@
-export const scaleFactor = 4;
+export const scaleFactor = 4; //resizes game elements
 
-export const dialogueData = {
+export const dialogueData = { //dict: key+vals
     pc: `This is my laptop. I am pretty proud of this one cuz my father🌝 and sister🧸 bought it for me. 
     Recently, I've made a couple of games🎮 in JavaScript. And I like designing stuff too cuz I customize stuff on a whim. 
     Anyway, regardless, I just like learning new stuff.`,
