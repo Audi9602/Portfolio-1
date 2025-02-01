@@ -1,7 +1,7 @@
-import kaboom from "kaboom";
+import kaboom from "kaboom"; //importing framework
 
-export const k = kaboom({
-    global: false,
-    touchToMouse: true,
-    canvas: document.getElementById("game"),
+export const k = kaboom({ //create & exp instance
+    global: false, //prev adding all funcs to global scope
+    touchToMouse: true, //touch events -> mouse events
+    canvas: document.getElementById("game"), //HTML Canvas -> game:render
 });
